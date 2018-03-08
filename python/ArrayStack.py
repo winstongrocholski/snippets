@@ -1,3 +1,5 @@
+"""Simple stack implemented with a python list"""
+
 class ArrayStack:
     #LIFO Stack implementation using a Python list.
     def __init__(self):
@@ -15,7 +17,6 @@ class ArrayStack:
     def push(self, item):
 
         self.items.append(item) # add another item to the stack
-        print('Added an item to the stack')
 
     def pop(self):
 
@@ -30,21 +31,3 @@ class ArrayStack:
             print("Stack is empty")
         else:
             return self.items[-1]
-
-
-
-stack = ArrayStack()
-
-print(f'The current size of the stack : {len(stack)}')
-stack.push(3)
-print(f'The current size of the stack : {len(stack)}')
-stack.push(4)
-print(f'The current size of the stack : {len(stack)}')
-stack.push(5)
-print(f'The current size of the stack : {len(stack)}')
-
-print(f'The top value of the stack is : stack.top()')
-
-print(f'Removed an item from the stack : {stack.pop()}')
-print(f'Removed an item from the stack : {stack.pop()}')
-print(f'Removed an item from the stack : {stack.pop()}')
