@@ -1,4 +1,8 @@
-"""Singly Linked List - each node only has a single linke to the next node"""
+"""
+Singly Linked List
+    Each Node has a single link to the next Node in the list.
+"""
+
 class Node(object):
 
     def __init__(self, data=None, next_node=None):
@@ -20,34 +24,34 @@ class Node(object):
 
 class LinkedList():
 
-    def __init__(self, head=None, tail=None):
-        self.head = head
-        self.tail = tail
-        self.size = 0
+    def __init__(self):
+        self.head = None  # initialized head of the linked list
+        self.tail = None  # initialized tail of the linked list
+        self.size = 0     # initialized size of the linked list
 
     def add_node_head(self, data):
-        new_node = Node(data, self.head)
+        new_node = Node(data, self.head) # new node being added to the list
         if(self.size == 0):
-            self.tail = new_node
+            self.tail = new_node # set tail when first node in list
         self.head = new_node
-        self.size += 1
+        self.size += 1 # linked list gets bigger
         return True
 
     def add_node_tail(self, data):
-        new_node = Node(data, None)
+        new_node = Node(data, None) # new node being added to the list
         if(self.size == 0):
-            self.head = new_node
+            self.head = new_node  # set head when first node in list
         else:
             self.tail.set_next(new_node)
         self.tail = new_node
-        self.size += 1
+        self.size += 1 # linked list gets bigger
         return True
 
     def print_nodes(self):
-        curr = self.head
+        curr = self.head # start from the head node
         while curr:
             print(curr.data)
-            curr = curr.get_next()
+            curr = curr.get_next() # move down the list of node
 
 
 linked_list = LinkedList()
