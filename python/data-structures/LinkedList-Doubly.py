@@ -1,23 +1,29 @@
 """
-Circulary Linked List
-    Each node has a single link to the next Node in the list.
-    The tail nodes next node points to the head node.
+Doubly Linked List
+    Each Node has a link to the next Node and previous Node.
 """
 
 class Node(object):
 
-    def __init__(self, data=None, next_node=None):
+    def __init__(self, data=None, next_node=None, prev_node=None):
         self.data = data
         self.next_node = next_node
+        self.prev_node = prev_node
 
     def get_next(self):
         return self.next_node
+
+    def get_prev(self):
+        return self.prev_node
 
     def get_data(self):
         return self.get_data
 
     def set_next(self, new_node):
         self.next_node = new_node
+
+    def set_prev(self, new_node):
+        self.prev_node = new_node
 
     def set_data(self, new_data):
         self.data = new_data
@@ -35,12 +41,11 @@ class LinkedList():
         if(self.size == 0):
             self.tail = new_node # set tail when first node in list
         self.head = new_node
-        self.tail.set_next(self.head) # set tails next node to head node
         self.size += 1 # linked list gets bigger
         return True
 
     def add_node_tail(self, data):
-        new_node = Node(data, self.head) # new node being added to list
+        new_node = Node(data, None) # new node being added to the list
         if(self.size == 0):
             self.head = new_node  # set head when first node in list
         else:
@@ -51,14 +56,9 @@ class LinkedList():
 
     def print_nodes(self):
         curr = self.head # start from the head node
-        count = 0;
-        cycle_count = 1; # number of times to print out the linked list
-        while count < (self.size * cycle_count):
+        while curr:
             print(curr.data)
             curr = curr.get_next() # move down the list of node
-            count += 1
-            if (count % self.size) == 0:
-                print('------------Finished Printing Linked List')
 
 
 linked_list = LinkedList()
