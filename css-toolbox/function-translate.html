@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+  <style>
+  body{
+    background-color:lightgreen;
+  }
+
+  .bird1{
+    width:400px;
+    height:400px;
+    transform: perspective(20px) translateX(10px) translateY(10px) translateZ(10px);
+  }
+  .bird2{
+    width:400px;
+    height:400px;
+    transform: perspective(20px) translate3d(10px, 10px, -1px); /*translate3d(x, y, z)*/
+  }
+  .bird3{
+    width:400px;
+    height:400px;
+    transform: translate(10px, 10px); /*translate(x, y)*/
+  }
+
+  </style>
+</head>
+<body>
+  <img class ='bird1' src='bird.png'>
+  <img class ='bird2' src='bird.png'>
+  <img class ='bird3' src='bird.png'>
+</body>
+
+</html>
