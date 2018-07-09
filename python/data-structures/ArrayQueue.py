@@ -1,5 +1,6 @@
 """Simple queue implemented with an array"""
-
+# Why so many quotes??????
+""" JavaDoc LOLOLOLOL """
 class ArrayQueue:
 
     MAX_QUEUE_SIZE = 2
