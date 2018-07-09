@@ -1,2 +1,2 @@
 # snippets
-Just a collection of code snippets
+Just a collection of code snippets.
